@@ -336,3 +336,11 @@ func WithConsumerOptionsQueueQuorum(options *ConsumerOptions) {
 
 	options.QueueOptions.Args["x-queue-type"] = "quorum"
 }
+
+func WithConsumerOptionsQueueStream(options *ConsumerOptions) {
+	if options.RabbitConsumerOptions.Args == nil {
+		options.RabbitConsumerOptions.Args = Table{}
+	}
+
+	options.QueueOptions.Args["x-queue-type"] = "Stream"
+}
