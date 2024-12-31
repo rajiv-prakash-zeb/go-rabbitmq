@@ -342,5 +342,5 @@ func WithConsumerOptionsQueueStream(options *ConsumerOptions) {
 		options.RabbitConsumerOptions.Args = Table{}
 	}
 
-	options.QueueOptions.Args["x-queue-type"] = "Stream"
+	options.QueueOptions.Args["x-queue-type"] = "stream"
 }
