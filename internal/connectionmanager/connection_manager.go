@@ -8,8 +8,8 @@ import (
 	"time"
 
 	amqp "github.com/rabbitmq/amqp091-go"
-	"github.com/wagslane/go-rabbitmq/internal/dispatcher"
-	"github.com/wagslane/go-rabbitmq/internal/logger"
+	"github.com/rajiv-prakash-zeb/go-rabbitmq/internal/dispatcher"
+	"github.com/rajiv-prakash-zeb/go-rabbitmq/internal/logger"
 )
 
 // ConnectionManager -
