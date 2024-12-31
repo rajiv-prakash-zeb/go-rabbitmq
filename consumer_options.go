@@ -215,6 +215,13 @@ func WithConsumerOptionsExchangeArgs(args Table) func(*ConsumerOptions) {
 	}
 }
 
+func WithConsumerOptionsArgs(args Table) func(*ConsumerOptions) {
+	return func(options *ConsumerOptions) {
+		ensureExchangeOptions(options)
+		options.RabbitConsumerOptions.Args = args
+	}
+}
+
 // WithConsumerOptionsRoutingKey binds the queue to a routing key with the default binding options
 func WithConsumerOptionsRoutingKey(routingKey string) func(*ConsumerOptions) {
 	return func(options *ConsumerOptions) {
